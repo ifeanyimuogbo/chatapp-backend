@@ -41,7 +41,7 @@ const server = new ApolloServer({
         models,
         loaders: {
           user: new DataLoader((keys) =>
-            loaders.user.batchUsers(keys, models),
+            loader.user.batchUsers(keys, models),
           ),
         },
       };
@@ -54,7 +54,7 @@ const server = new ApolloServer({
         secret: process.env.SECRET,
         loaders: {
           user: new DataLoader((keys) =>
-            loaders.user.batchUsers(keys, models),
+            loader.user.batchUsers(keys, models),
           ),
         },
       };

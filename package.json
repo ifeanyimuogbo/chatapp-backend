@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node --exec babel-node src/index.js",
+    "start": "babel-node src/index.js",
     "start:dev": "nodemon --exec babel-node src/index.js",
     "test-server": "TEST_DATABASE=mytestdatabase npm start",
     "test": "mocha --require @babel/register 'src/**/*.spec.js'"
