@@ -31,6 +31,8 @@ const getMe = async (req) => {
 
 const PORT = process.env.PORT || 8000;
 const server = new ApolloServer({
+  introspection: true,
+  playground: true,
   typeDefs: schema,
   resolvers,
   context: async ({ req, connection }) => {
