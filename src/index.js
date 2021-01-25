@@ -22,9 +22,7 @@ const getMe = async (req) => {
     try {
       return await jwt.verify(token, process.env.SECRET);
     } catch (error) {
-      throw new AuthenticationError(
-        'Your session expired. Try again',
-      );
+      throw new AuthenticationError('Your session expired.Try again');
     }
   }
 };
